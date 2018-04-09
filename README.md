@@ -18,24 +18,24 @@ This basic usage example should help you get started :
 
 ```javascript
 const express = require('express');
-const apiKeyAuth = require('api-key-auth');
+const apiKeyAuth = require('./middlewares/apiKeyAuth');
 
 const app = express();
 
 // Create the collection of api keys
 const apiKeys = new Map();
-apiKeys.set(123456789, {
+apiKeys.set('123456789', {
   id: 1,
   name: 'app1',
   secret: 'secret1'
 });
-apiKeys.set(987654321, {
+apiKeys.set('987654321', {
   id: 2,
   name: 'app2',
   secret: 'secret2'
 });
 
-// Your function to get the secret key from the key id
+// Your function to get the secret associated to the key id
 function getSecret(keyId, done) {
   if (!apiKeys.has(keyId)) {
     done(new Error('Unknown api key'));
@@ -47,8 +47,10 @@ function getSecret(keyId, done) {
   });
 }
 
-app.get('/protected', apiKeyAuth({ getSecret }), function(req, res) {
-  res.send(`Hello ${res.credentials.name}`);
+app.use(apiKeyAuth({ getSecret }));
+
+app.get('/protected', (req, res) => {
+  res.send(`Hello ${req.credentials.name}`);
 });
 
 app.listen(8080);
@@ -62,7 +64,7 @@ Create an api key based authentication middleware function using the given `opti
 
 #### options.getSecret (REQUIRED)
 
-A function with signature `function(keyId, done)` to be invoked to retrieve the secret from the `keyId` .
+A function with signature `function(keyId, done)` to be invoked to retrieve the secret from the `keyId`.
 
 * `keyId` (`String`) - The api key used to retrieve the secret.
 * `done` (`Function`) - A function with signature `function(err, secret, credentials)` to be invoked when the secret is retrieved.
