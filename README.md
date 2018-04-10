@@ -79,4 +79,4 @@ By default, you can attach information about the client application on `req.cred
 
 ## HTTP signature scheme
 
-The client application must signs all HTTP requests. The signature is based on this draft ["Signing HTTP Messages"](https://tools.ietf.org/html/draft-cavage-http-signatures-09).
+Look ["HTTP signature scheme"](signature.md) to sign a HTTP request.
