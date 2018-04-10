@@ -1,7 +1,7 @@
 {
   "name": "api-key-auth",
-  "version": "0.1.0",
-  "description": "Express/Restify middleware for api key based authentication",
+  "version": "0.1.1",
+  "description": "Express/Restify middleware to authenticate HTTP requests based on api key and signature",
   "author": {
     "name": "Axel SHAÏTA",
     "email": "shaita.axel@gmail.com",
@@ -20,9 +20,13 @@
     "api",
     "rest",
     "apiKey",
+    "key",
     "signature",
     "express",
+    "expressjs",
+    "restify",
     "middleware",
+    "plugin",
     "nodejs"
   ],
   "main": "./lib",
