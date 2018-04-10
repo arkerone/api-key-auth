@@ -2,6 +2,11 @@
 
 Express/Restify middleware to authenticate HTTP requests based on api key and signature.
 
+[![npm version](https://badge.fury.io/js/api-key_auth.svg)](https://badge.fury.io/js/api-key_auth)
+[![codebeat badge](https://codebeat.co/badges/8b9de4e3-0841-4a91-85fd-5a26f58901c3)](https://codebeat.co/projects/github-com-arkerone-api-key-auth-master)
+[![Build Status](https://travis-ci.org/arkerone/api-key-auth.svg?branch=master)](https://travis-ci.org/arkerone/api-key-auth)
+[![codecov](https://codecov.io/gh/arkerone/api-key-auth/branch/master/graph/badge.svg)](https://codecov.io/gh/arkerone/api-key-auth)
+
 ## Installation
 
 ```
@@ -80,3 +85,27 @@ By default, you can attach information about the client application on `req.cred
 ## HTTP signature scheme
 
 Look ["HTTP signature scheme"](signature.md) to sign a HTTP request.
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2018 Axel SHAÏTA <mailto:shaita.axel@gmail.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
