@@ -1,18 +1,13 @@
 {
   "name": "api-key-auth",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Express/Restify middleware to authenticate HTTP requests based on api key and signature",
   "author": {
     "name": "Axel SHAÏTA",
     "email": "shaita.axel@gmail.com",
     "url": "https://www.codeheroes.fr"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "authentication",
     "auth",
