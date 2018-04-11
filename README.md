@@ -71,7 +71,7 @@ Create an api key based authentication middleware function using the given `opti
 | :----------------: | :-------------: | :-------------: | :---------------------------------------------- |
 |    `getSecret`     |   `Function`    |       `-`       | Invoked to retrieve the secret from the `keyId` |
 | `requestProperty`  |    `String`     | `'credentials'` | The request property to attach the information  |
-| `requestLifetime`) | `Number | null` |      `300`      | The lifetime of a request in seconds            |
+| `requestLifetime`  | `Number | null` |      `300`      | The lifetime of a request in seconds            |
 
 #### options.getSecret (REQUIRED)
 
