@@ -65,7 +65,13 @@ app.listen(8080);
 
 ### apiKeyAuth(options)
 
-Create an api key based authentication middleware function using the given `options`.
+Create an api key based authentication middleware function using the given `options` :
+
+|        Name        |      Type       |     Default     | Description                                     |
+| :----------------: | :-------------: | :-------------: | :---------------------------------------------- |
+|    `getSecret`     |   `Function`    |       `-`       | Invoked to retrieve the secret from the `keyId` |
+| `requestProperty`  |    `String`     | `'credentials'` | The request property to attach the information  |
+| `requestLifetime`) | `Number | null` |      `300`      | The lifetime of a request in seconds            |
 
 #### options.getSecret (REQUIRED)
 
@@ -81,6 +87,10 @@ A function with signature `function(keyId, done)` to be invoked to retrieve the 
 #### options.requestProperty (OPTIONAL)
 
 By default, you can attach information about the client application on `req.credentials` but can be configured with the `requestProperty` option.
+
+#### options.requestLifetime (OPTIONAL)
+
+The lifetime of a request in second, by default is set to 300 seconds, set it to null to disable it. This options is used if HTTP header "date" is used to create the signature.
 
 ## HTTP signature scheme
 
