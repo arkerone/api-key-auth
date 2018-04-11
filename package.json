@@ -1,6 +1,6 @@
 {
   "name": "api-key-auth",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Express/Restify middleware to authenticate HTTP requests based on api key and signature",
   "author": {
     "name": "Axel SHAÏTA",
