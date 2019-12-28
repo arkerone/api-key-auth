@@ -5,7 +5,7 @@ Express/Restify middleware to authenticate HTTP requests based on api key and si
 [![npm version](https://badge.fury.io/js/api-key-auth.svg)](https://badge.fury.io/js/api-key-auth)
 [![codebeat badge](https://codebeat.co/badges/8b9de4e3-0841-4a91-85fd-5a26f58901c3)](https://codebeat.co/projects/github-com-arkerone-api-key-auth-master)
 [![Build Status](https://travis-ci.org/arkerone/api-key-auth.svg?branch=master)](https://travis-ci.org/arkerone/api-key-auth)
-[![codecov](https://codecov.io/gh/arkerone/api-key-auth/branch/master/graph/badge.svg)](https://codecov.io/gh/arkerone/api-key-auth)
+[![codecov](https://codecov.io/gh/arkerone/api-key-auth/branch/master/graph/badge.svg)](https://codecov.io/gh/arkerone/api-key-auth) [![Greenkeeper badge](https://badges.greenkeeper.io/arkerone/api-key-auth.svg)](https://greenkeeper.io/)
 
 ## Installation
 
