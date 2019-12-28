@@ -5,7 +5,8 @@ Express/Restify middleware to authenticate HTTP requests based on api key and si
 [![npm version](https://badge.fury.io/js/api-key-auth.svg)](https://badge.fury.io/js/api-key-auth)
 [![codebeat badge](https://codebeat.co/badges/8b9de4e3-0841-4a91-85fd-5a26f58901c3)](https://codebeat.co/projects/github-com-arkerone-api-key-auth-master)
 [![Build Status](https://travis-ci.org/arkerone/api-key-auth.svg?branch=master)](https://travis-ci.org/arkerone/api-key-auth)
-[![codecov](https://codecov.io/gh/arkerone/api-key-auth/branch/master/graph/badge.svg)](https://codecov.io/gh/arkerone/api-key-auth) [![Greenkeeper badge](https://badges.greenkeeper.io/arkerone/api-key-auth.svg)](https://greenkeeper.io/)
+[![codecov](https://codecov.io/gh/arkerone/api-key-auth/branch/master/graph/badge.svg)](https://codecov.io/gh/arkerone/api-key-auth)
+[![Greenkeeper badge](https://badges.greenkeeper.io/arkerone/api-key-auth.svg)](https://greenkeeper.io/)
 
 ## Installation
 
@@ -67,22 +68,22 @@ app.listen(8080);
 
 Create an api key based authentication middleware function using the given `options` :
 
-|        Name        |      Type       |     Default     | Description                                     |
-| :----------------: | :-------------: | :-------------: | :---------------------------------------------- |
-|    `getSecret`     |   `Function`    |       `-`       | Invoked to retrieve the secret from the `keyId` |
-| `requestProperty`  |    `String`     | `'credentials'` | The request property to attach the information  |
-| `requestLifetime`  | `Number | null` |      `300`      | The lifetime of a request in seconds            |
+|       Name        |      Type       |     Default     | Description                                     |
+| :---------------: | :-------------: | :-------------: | :---------------------------------------------- |
+|    `getSecret`    |   `Function`    |       `-`       | Invoked to retrieve the secret from the `keyId` |
+| `requestProperty` |    `String`     | `'credentials'` | The request property to attach the information  |
+| `requestLifetime` | `Number | null` |      `300`      | The lifetime of a request in seconds            |
 
 #### options.getSecret (REQUIRED)
 
 A function with signature `function(keyId, done)` to be invoked to retrieve the secret from the `keyId`.
 
-* `keyId` (`String`) - The api key used to retrieve the secret.
-* `done` (`Function`) - A function with signature `function(err, secret, credentials)` to be invoked when the secret is retrieved.
+- `keyId` (`String`) - The api key used to retrieve the secret.
+- `done` (`Function`) - A function with signature `function(err, secret, credentials)` to be invoked when the secret is retrieved.
 
-  * `err` (`Error`) - The error that occurred.
-  * `secret` (`String`) - The secret to use to verify the signature.
-  * `credentials` (`Object`) - `req.credentials` will be set with this object.
+  - `err` (`Error`) - The error that occurred.
+  - `secret` (`String`) - The secret to use to verify the signature.
+  - `credentials` (`Object`) - `req.credentials` will be set with this object.
 
 #### options.requestProperty (OPTIONAL)
 
