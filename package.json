@@ -45,7 +45,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react": "^7.20.0",
     "mocha": "^6.2.2",
     "nyc": "^15.0.0"
   }
