@@ -39,7 +39,7 @@
   "homepage": "https://github.com/arkerone/api-key-auth#readme",
   "devDependencies": {
     "chai": "^4.2.0",
-    "codecov": "^3.6.1",
+    "codecov": "^3.7.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
