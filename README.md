@@ -24,7 +24,7 @@ This basic usage example should help you get started :
 
 ```javascript
 const express = require('express');
-const apiKeyAuth = require('./middlewares/apiKeyAuth');
+const apiKeyAuth = require('api-key-auth');
 
 const app = express();
 
@@ -44,7 +44,7 @@ apiKeys.set('987654321', {
 // Your function to get the secret associated to the key id
 function getSecret(keyId, done) {
   if (!apiKeys.has(keyId)) {
-    done(new Error('Unknown api key'));
+    return done(new Error('Unknown api key'));
   }
   const clientApp = apiKeys.get(keyId);
   done(null, clientApp.secret, {
